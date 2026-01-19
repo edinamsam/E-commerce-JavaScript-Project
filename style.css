@@ -5,3 +5,29 @@
 body {
     margin: 0;
 }
+
+.cart-dropdown {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+    display: none;
+}
+
+.cart-dropdown h3 {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-content {
+    padding: 2rem;
+    text-align: center;
+    color: #777;
+}
+
