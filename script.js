@@ -11,6 +11,8 @@ const checkoutBtn = document.querySelector(".checkout-btn");
 const cartQty = document.querySelector(".cart-qty");
 const cartTotal = document.querySelector(".cart-total");
 const deleteBtn = document.querySelector(".delete-btn");
+const mainImage = document.querySelector(".main-image");
+const thumbnails = document.querySelectorAll(".thumb");
 
 const PRICE = 125;
 let cartQuantity = 0;
@@ -62,4 +64,17 @@ deleteBtn.addEventListener("click", () => {
   cartItem.classList.add("hidden");
   checkoutBtn.classList.add("hidden");
   emptyCartText.classList.remove("hidden");
+});
+
+thumbnails.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    const index = thumb.dataset.index;
+
+    //Update main image
+    mainImage.src = `images/image-product-${index}.jpg`;
+
+    //Update active thumbnail
+    thumbnails.forEach((t) => t.classList.remove("active"));
+    thumb.classList.add("active");
+  });
 });
