@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/21f9334e0b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header class="header">
         <div class="nav-left">
@@ -29,9 +31,27 @@
             <div class="cart-dropdown">
                 <h3>Cart</h3>
                 <div class="cart-content">
+                    <!-- Empty state -->>
                     <p class="empty-cart">Your cart is empty.</p>
+
+                    <!-- Filled state -->
+                    <div class="cart-item hidden">
+                        <img class="cart-thumb" src="images/image-product-1-thumbnail.jpg" alt="">
+
+                        <div class="cart-item-info">
+                            <p>Fall Limited Edition Sneakers</p>
+                            <p>$125.00 x <span class="cart-qty">0</span>
+                                <strong>$<span class="cart-total">0.00</span>
+                                </strong>
+                            </p>
+                        </div>
+
+                        <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+
+                    <button class="checkout-btn hidden">Checkout</button>
                 </div>
-            </div> 
+            </div>
             <img class="avatar" src="images/image-avatar.png" alt="User avatar">
         </div>
     </header>
@@ -72,4 +92,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
