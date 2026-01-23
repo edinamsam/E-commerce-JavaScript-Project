@@ -101,3 +101,49 @@ body {
 
 .prev { left: -40px; }
 .next { right: -40px; }
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+}
+
+.mobile-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.mobile-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: white;
+    padding: 2rem;
+    transform: translateX(-100%);
+}
+
+.mobile-menu.active .mobile-nav {
+    transform: translateX(0);
+}
+
+.mobile-prev,
+.mobile-next {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+    .thumbnails{
+        display: none;
+    }
+
+    .mobile-prev,
+    .mobile-next {
+        display: block;
+    }
+}

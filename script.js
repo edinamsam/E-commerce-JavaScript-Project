@@ -20,11 +20,18 @@ const closeLightboxBtn = document.querySelector(".close-lightbox");
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 const lightboxThumbs = document.querySelectorAll(".lightbox-thumbnails .thumb");
+const menuBtn = document.querySelector(".menu-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileOverlay = document.querySelector(".mobile-overlay");
+const closeMenuBtn = document.querySelector(".close-menu");
+const mobilePrev = document.querySelector(".mobile-prev");
+const mobileNext = document.querySelector(".mobile-next");
 
 const PRICE = 125;
 let cartQuantity = 0;
 let quantity = 0;
 let currentIndex = 1;
+let mobileIndex = 1;
 
 plusBtn.addEventListener("click", () => {
   quantity++;
@@ -119,4 +126,34 @@ prevBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   currentIndex = currentIndex === 4 ? 1 : currentIndex + 1;
   updateLightboxImage();
+});
+
+function openMenu() {
+  mobileMenu.classList.remove("hidden");
+  mobileMenu.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove("active");
+  mobileMenu.classList.add("hidden");
+  document.body.style.overflow = "";
+}
+
+menuBtn.addEventListener("click", openMenu);
+closeMenuBtn.addEventListener("click", closeMenu);
+mobileOverlay.addEventListener("click", closeMenu);
+
+function updateMobileImage() {
+  mainImage.src = `images/image-product-${mobileIndex}.jpg`;
+}
+
+mobilePrev.addEventListener("click", () => {
+  mobileIndex = mobileIndex === 1 ? 4 : mobileIndex - 1;
+  updateMobileImage();
+});
+
+mobileNext.addEventListener("click", () => {
+  mobileIndex = mobileIndex === 4 ? 1 : mobileIndex + 1;
+  updateMobileImage();
 });
