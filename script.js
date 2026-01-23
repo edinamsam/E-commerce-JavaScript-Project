@@ -13,10 +13,18 @@ const cartTotal = document.querySelector(".cart-total");
 const deleteBtn = document.querySelector(".delete-btn");
 const mainImage = document.querySelector(".main-image");
 const thumbnails = document.querySelectorAll(".thumb");
+const lightbox = document.querySelector(".lightbox");
+const overlay = document.querySelector(".overlay");
+const lightboxMain = document.querySelector(".lightbox-main");
+const closeLightboxBtn = document.querySelector(".close-lightbox");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+const lightboxThumbs = document.querySelectorAll(".lightbox-thumbnails .thumb");
 
 const PRICE = 125;
 let cartQuantity = 0;
 let quantity = 0;
+let currentIndex = 1;
 
 plusBtn.addEventListener("click", () => {
   quantity++;
@@ -77,4 +85,38 @@ thumbnails.forEach((thumb) => {
     thumbnails.forEach((t) => t.classList.remove("active"));
     thumb.classList.add("active");
   });
+});
+
+mainImage.addEventListener("click", () => {
+  lightbox.classList.remove("hidden");
+  lightboxMain.src = mainImage.src;
+});
+
+function closeLightbox() {
+  lightbox.classList.add("hidden");
+}
+
+closeLightboxBtn.addEventListener("click", closeLightbox);
+overlay.addEventListener("click", closeLightbox);
+
+//keydowns are often added to the document element
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeLightbox();
+});
+
+function updateLightboxImage() {
+  lightboxMain.src = `images/image-product-${currentIndex}.jpg`;
+
+  lightboxThumbs.forEach((t) => t.classList.remove("active"));
+  lightboxThumbs[currentIndex - 1].classList.add("active");
+}
+
+prevBtn.addEventListener("click", () => {
+  currentIndex = currentIndex === 1 ? 4 : currentIndex - 1;
+  updateLightboxImage();
+});
+
+nextBtn.addEventListener("click", () => {
+  currentIndex = currentIndex === 4 ? 1 : currentIndex + 1;
+  updateLightboxImage();
 });

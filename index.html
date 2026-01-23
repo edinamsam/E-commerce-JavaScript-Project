@@ -28,10 +28,10 @@
                 <img src="images/icon-cart.svg" alt="Cart">
                 <span class="cart-count">0</span>
             </button>
-            <div class="cart-dropdown">
+            <div class="cart-dropdown hidden">
                 <h3>Cart</h3>
                 <div class="cart-content">
-                    <!-- Empty state -->>
+                    <!-- Empty state -->
                     <p class="empty-cart">Your cart is empty.</p>
 
                     <!-- Filled state -->
@@ -86,12 +86,32 @@
                 </div>
 
                 <button class="add-to-cart">
-                    <img src="" alt="">
+                    <img src="images/icon-cart.svg" alt="">
                     Add to cart
                 </button>
             </div>
         </section>
     </main>
+
+    <div class="lightbox hidden">
+        <div class="overlay"></div>
+        
+        <div class="lightbox-content">
+            <button class="close-lightbox"><i class="fa-solid fa-x"></i></button>
+
+            <img src="images/image-product-1.jpg" alt="Product" class="lightbox-main">
+
+            <button class="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="next"><i class="fa-solid fa-angle-right"></i></button>
+
+            <div class="lightbox-thumbnails">
+                <img src="images/image-product-1-thumbnail.jpg" data-index="1" class="thumb active">
+                <img src="images/image-product-2-thumbnail.jpg" data-index="2" class="thumb">
+                <img src="images/image-product-3-thumbnail.jpg" data-index="3" class="thumb">
+                <img src="images/image-product-4-thumbnail.jpg" data-index="4" class="thumb">
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
