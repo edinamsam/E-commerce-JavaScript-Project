@@ -303,6 +303,10 @@ body {
         justify-content: space-between;
     }
 
+    .nav-left img {
+        width: 100px;
+    }
+
     .nav-right {
         gap: 0.5rem;
     }
