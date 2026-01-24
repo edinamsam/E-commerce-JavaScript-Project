@@ -299,6 +299,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+    }
+
     .nav-links {
         display: none;
     }
