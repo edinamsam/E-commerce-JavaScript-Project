@@ -299,6 +299,13 @@ body {
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .product {
+        flex-direction: column;
+    }
     .actions {
         flex-direction: column;
     }
