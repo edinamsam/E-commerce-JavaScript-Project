@@ -76,7 +76,7 @@ body {
 .cart-btn {
     display: flex;
     height: 30px;
-    width: 40px;
+    width: 30px;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
@@ -84,12 +84,12 @@ body {
 }
 
 .cart-count {
-    font-size: 10px;
+    font-size: 5px;
 }
 
 .avatar {
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 
 .product {
@@ -301,6 +301,7 @@ body {
 @media (max-width: 768px) {
     .header {
         justify-content: space-between;
+        gap: 2rem;
     }
 
     .nav-left img {
