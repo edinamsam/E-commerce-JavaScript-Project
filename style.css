@@ -17,7 +17,7 @@ body {
 
 .nav-left {
     display: flex;
-    gap: 9rem;
+    gap: 6rem;
 }
 
 .nav-left img {
@@ -304,7 +304,7 @@ body {
     }
 
     .nav-left img {
-        width: 100px;
+        width: 150px;
     }
 
     .nav-right {
