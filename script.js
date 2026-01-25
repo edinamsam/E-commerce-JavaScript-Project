@@ -157,3 +157,5 @@ mobileNext.addEventListener("click", () => {
   mobileIndex = mobileIndex === 4 ? 1 : mobileIndex + 1;
   updateMobileImage();
 });
+
+console.log(window.innerWidth);

@@ -48,8 +48,8 @@ body {
 
 .cart-dropdown {
     position: absolute;
-    top: 80px;
-    right: 40px;
+    top: calc(100% + 12px);
+    right: 0;
     width: 350px;
     background: white;
     border-radius: 10px;
@@ -327,7 +327,7 @@ body {
     transform: translateY(-50%) scale(0.92);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .header {
         justify-content: space-between;
         gap: 2rem;
