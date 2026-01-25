@@ -24,32 +24,34 @@
         </div>
 
         <div class="nav-right">
-            <button class="cart-btn">
-                <img src="images/icon-cart.svg" alt="Cart">
-                <span class="cart-count">0</span>
-            </button>
-            <div class="cart-dropdown hidden">
-                <h3>Cart</h3>
-                <div class="cart-content">
-                    <!-- Empty state -->
-                    <p class="empty-cart">Your cart is empty.</p>
-
-                    <!-- Filled state -->
-                    <div class="cart-item hidden">
-                        <img class="cart-thumb" src="images/image-product-1-thumbnail.jpg" alt="">
-
-                        <div class="cart-item-info">
-                            <p>Fall Limited Edition Sneakers</p>
-                            <p>$125.00 x <span class="cart-qty">0</span>
-                                <strong>$<span class="cart-total">0.00</span>
-                                </strong>
-                            </p>
+            <div class="cart-wrapper">
+                <button class="cart-btn">
+                    <img src="images/icon-cart.svg" alt="Cart">
+                    <span class="cart-count">0</span>
+                </button>
+                <div class="cart-dropdown hidden">
+                    <h3>Cart</h3>
+                    <div class="cart-content">
+                        <!-- Empty state -->
+                        <p class="empty-cart">Your cart is empty.</p>
+                
+                        <!-- Filled state -->
+                        <div class="cart-item hidden">
+                            <img class="cart-thumb" src="images/image-product-1-thumbnail.jpg" alt="">
+                
+                            <div class="cart-item-info">
+                                <p>Fall Limited Edition Sneakers</p>
+                                <p>$125.00 x <span class="cart-qty">0</span>
+                                    <strong>$<span class="cart-total">0.00</span>
+                                    </strong>
+                                </p>
+                            </div>
+                
+                            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
                         </div>
-
-                        <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                
+                        <button class="checkout-btn hidden">Checkout</button>
                     </div>
-
-                    <button class="checkout-btn hidden">Checkout</button>
                 </div>
             </div>
             <img class="avatar" src="images/image-avatar.png" alt="User avatar">
